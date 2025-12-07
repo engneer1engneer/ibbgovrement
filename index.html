@@ -1,1 +1,195 @@
 
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="البوابة الرقمية لمحافظة إب - قريباً">
+    <link rel="icon" href="https://public-frontend-cos.metadl.com/mgx/img/favicon.png" type="image/png">
+    <title>البوابة الرقمية لمحافظة إب - قريباً</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Cairo', sans-serif;
+            background: linear-gradient(135deg, #1a3a0f 0%, #2d5016 50%, #4a7c2c 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .container {
+            position: relative;
+            z-index: 10;
+            text-align: center;
+            animation: fadeIn 1.5s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .bird-logo {
+            width: 180px;
+            height: 180px;
+            margin-bottom: 40px;
+            filter: drop-shadow(0 10px 30px rgba(212, 175, 55, 0.5));
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0px);
+            }
+            50% {
+                transform: translateY(-20px);
+            }
+        }
+
+        .coming-soon {
+            font-size: 8rem;
+            font-weight: 900;
+            background: linear-gradient(135deg, #d4af37 0%, #f4e4c1 50%, #d4af37 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-shadow: 0 10px 40px rgba(212, 175, 55, 0.3);
+            animation: glow 2s ease-in-out infinite alternate;
+            line-height: 1.2;
+        }
+
+        @keyframes glow {
+            from {
+                filter: brightness(1) drop-shadow(0 0 20px rgba(212, 175, 55, 0.5));
+            }
+            to {
+                filter: brightness(1.2) drop-shadow(0 0 40px rgba(212, 175, 55, 0.8));
+            }
+        }
+
+        .subtitle {
+            font-size: 2rem;
+            color: #f4e4c1;
+            margin-top: 20px;
+            font-weight: 600;
+            text-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+            animation: fadeIn 2s ease-out 0.5s both;
+        }
+
+        .particles {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            pointer-events: none;
+        }
+
+        .particle {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background: #d4af37;
+            border-radius: 50%;
+            opacity: 0.6;
+            animation: rise 10s infinite ease-in;
+        }
+
+        .particle:nth-child(1) {
+            left: 10%;
+            animation-delay: 0s;
+            animation-duration: 8s;
+        }
+
+        .particle:nth-child(2) {
+            left: 30%;
+            animation-delay: 2s;
+            animation-duration: 10s;
+        }
+
+        .particle:nth-child(3) {
+            left: 50%;
+            animation-delay: 4s;
+            animation-duration: 12s;
+        }
+
+        .particle:nth-child(4) {
+            left: 70%;
+            animation-delay: 1s;
+            animation-duration: 9s;
+        }
+
+        .particle:nth-child(5) {
+            left: 90%;
+            animation-delay: 3s;
+            animation-duration: 11s;
+        }
+
+        @keyframes rise {
+            0% {
+                bottom: -10%;
+                opacity: 0;
+            }
+            50% {
+                opacity: 0.6;
+            }
+            100% {
+                bottom: 110%;
+                opacity: 0;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .coming-soon {
+                font-size: 4rem;
+            }
+            
+            .subtitle {
+                font-size: 1.3rem;
+            }
+            
+            .bird-logo {
+                width: 120px;
+                height: 120px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="particles">
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+    </div>
+
+    <div class="container">
+        <!-- استبدال شعار الهدهد بشعار اليمن -->
+        <img class="bird-logo" src="https://upload.wikimedia.org/wikipedia/commons/8/82/Emblem_of_Yemen.svg" alt="شعار اليمن">
+        <h1 class="coming-soon">قريباً</h1>
+        <p class="subtitle">البوابة الرقمية لمحافظة إب</p>
+    </div>
+</body>
+
+</html>
